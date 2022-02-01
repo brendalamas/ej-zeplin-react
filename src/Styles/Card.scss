@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Maven+Pro:wght@400;500;600;700;800;900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+$ancho:300px;
+$alto:257px;
+$espacio:42px;
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: $ancho;
+    margin: $espacio;
+    font-family: 'Montserrat Alternates', sans-serif;
+    border: 1px solid #111111;
+    padding: 5px;
+
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .columns{
+            display: flex;
+            flex-direction: column;
+            width: 191px ;
+            height:126px ;
+            height: auto;
+
+            .onsale{
+                display: flex;
+                flex-direction: row;
+                p{
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .price{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
+    .icon{
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+    }
+}
+.carrito{
+    padding: 10px;
+    border-radius: 5px;
+}
+.carrito:hover{
+    background-color: #4945453b;
+}
+.card-img{
+    width: 300px;
+    height: 257px;
+}
+
+// clases que se agregan ante boolean
+.fondo-no-disponible{
+    background-color: grey;
+}
+.border-card{
+    border: 2px solid blue;
+    position: relative;
+    animation: mymove 1s infinite;
+    animation-timing-function: linear;
+}
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 30px;}
+  }
+
+// modal
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color:#111111bd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .modal-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 450px;
+        background-color: #ffff;
+        border-radius: 10px;
+        border: 1px solid #111111;
+        padding: 30px;
+        button {
+            background-color: #111111;
+            color: #ffff;
+            border: none;
+            border-radius: 10px;
+            margin-right: 25px;
+            font-size: 1.5rem;
+        }
+    }
+}
